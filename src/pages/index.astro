@@ -11,64 +11,81 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
+    <!-- Include the site header -->
     <Header title={SITE_TITLE} />
+
+    <!-- Main content container -->
     <main class="container mx-auto py-8">
       <h1 class="text-4xl font-bold text-center mb-4">{SITE_TITLE}</h1>
       <p class="text-center text-gray-600">{SITE_DESCRIPTION}</p>
 
+      <!-- Section: Information -->
       <div class="my-8">
         <h2 class="text-3xl font-bold">Information</h2>
         <p class="mt-4">
-          Welcome to the AS-SET AS197532:AS-SELFHOSTABLE website. We are proud
-          to bring over 5 years of solid experience in sysadmin and selfhosting
-          and maintain a robust BGP infrastructure. We have a solid track record
-          of maintaing a high degree of uptime and reliability within our
-          network and our services.
+          Welcome to AS-SET AS197532:AS-SELFHOSTABLE website. With over 5 years
+          of distinguished experience in system administration and self-hosting,
+          we take pride in maintaining a robust BGP infrastructure. Our network
+          and services have consistently demonstrated a high degree of uptime
+          and reliability.
         </p>
         <p class="mt-2">
-          For more details about our team, visit our <a
+          For more details about our team, please visit our <a
             class="text-blue-600"
             href="/about">About</a
           > page.
         </p>
       </div>
+
+      <!-- Section: Consulting -->
       <div class="my-8 bg-green-50 rounded p-8">
         <h2 class="text-3xl font-bold">Consulting</h2>
         <p class="mt-4 text-lg">
-          We offer consulting services with our extensive knowledge of system
-          and network administration, to inquire about these services please
-          contact us at <a
+          We offer specialized consulting services leveraging our extensive
+          knowledge in system and network administration. To inquire about these
+          services, please contact us at <a
             class="text-blue-600"
-            href="mailto:consulting@selfhostable.net"
-            >consulting@selfhostable.net</a
-          >
+            href="mailto:consulting@as.selfhostable.net"
+            >consulting@as.selfhostable.net</a
+          >.
         </p>
       </div>
+
+      <!-- Section: Peering Policy -->
       <div class="my-8 bg-red-50 rounded p-8">
         <div class="grid grid-cols-2">
           <div>
             <h2 class="text-3xl font-bold">Peering Policy</h2>
             <p class="mt-4 text-lg">
-              We are open to new peers to expand our Network, please check our
-              dedicated article on peering <a
+              We welcome new peers to expand our Network. For more information,
+              please refer to our dedicated article on peering <a
                 class="text-blue-600"
                 href="/events/peering">here</a
               >.
             </p>
           </div>
-          <img class="w-24 justify-self-end" src="/networking.png" />
+          <img
+            class="w-24 justify-self-end"
+            src="/networking.png"
+            alt="Networking"
+          />
         </div>
       </div>
+
+      <!-- Section: Contact Us -->
       <div class="my-8 bg-blue-50 rounded p-8">
         <h2 class="text-3xl font-bold">Contact Us</h2>
         <p class="mt-4 text-lg">
-          For contact relating to Abuse/Connectivety Issues/Other network
-          related issues please contact our NOC{" "}
-          <a class="text-blue-600" href="mailto:noc@selfhostable.net"
-            >noc@selfhostable.net</a
+          For any concerns regarding Abuse, Connectivity Issues, or other
+          network-related matters, please reach out to our Network Operations
+          Center (NOC) at <a
+            class="text-blue-600"
+            href="mailto:noc@as.selfhostable.net">noc@as.selfhostable.net</a
           >.
         </p>
       </div>
+
+      <!-- Section: Current Held ASN's -->
       <div class="my-8">
         <h2 class="text-3xl font-bold">Current Held ASN's</h2>
         <div class="mt-4">
@@ -77,70 +94,73 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
               <tr>
                 <th class="px-4 py-2">ASN</th>
                 <th class="px-4 py-2">Usage</th>
-                <tr> </tr>
-                <tbody>
-                  <tr>
-                    <td class="border px-4 py-2">AS197532</td>
-                    <td class="border px-4 py-2">Personal</td>
-                  </tr>
-                  <!-- More Rows Here in the Future -->
-                </tbody>
               </tr>
             </thead>
+            <tbody>
+              <tr>
+                <td class="border px-4 py-2">AS197532</td>
+                <td class="border px-4 py-2">Personal</td>
+              </tr>
+              <!-- More Rows Here in the Future -->
+            </tbody>
           </table>
-
-          <div class="my-8">
-            <h2 class="text-3xl font-bold">Current Held Prefixes</h2>
-            <div class="mt-4">
-              <table class="table-auto w-full">
-                <thead>
-                  <tr>
-                    <th class="px-4 py-2">Prefix</th>
-                    <th class="px-4 py-2">Usage</th>
-                    <th class="px-4 py-2">Assigned ASN</th>
-                    <th class="px-4 py-2">Rented/Permanent/Owned</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="border px-4 py-2">2a05:dfc1:7200::/40</td>
-                    <td class="border px-4 py-2">Active</td>
-                    <td class="border px-4 py-2">AS197532</td>
-                    <td class="border px-4 py-2">Permanent</td>
-                  </tr>
-                  <!-- More Rows Here in the Future -->
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="my-8">
-            <h2 class="text-3xl font-bold">Places of Network Presence</h2>
-            <div class="mt-4">
-              <table class="table-auto w-full">
-                <thead>
-                  <tr>
-                    <th class="px-4 py-2">Hostname</th>
-                    <th class="px-4 py-2">Routed Prefix</th>
-                    <th class="px-4 py-2">Provider</th>
-                    <th class="px-4 py-2">IXP Presence</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="border px-4 py-2">ams1.pop.selfhostable.net</td>
-                    <td class="border px-4 py-2">(Insert Later)</td>
-                    <td class="border px-4 py-2">iFog</td>
-                    <td class="border px-4 py-2">FogIXP</td>
-                  </tr>
-                  <!-- More Rows Here in the Future -->
-                </tbody>
-              </table>
-            </div>
-          </div>
         </div>
+      </div>
 
-        <Footer />
+      <!-- Section: Current Held Prefixes -->
+      <div class="my-8">
+        <h2 class="text-3xl font-bold">Current Held Prefixes</h2>
+        <div class="mt-4">
+          <table class="table-auto w-full">
+            <thead>
+              <tr>
+                <th class="px-4 py-2">Prefix</th>
+                <th class="px-4 py-2">Usage</th>
+                <th class="px-4 py-2">Assigned ASN</th>
+                <th class="px-4 py-2">Rented/Permanent/Owned</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border px-4 py-2">2a05:dfc1:7200::/40</td>
+                <td class="border px-4 py-2">Active</td>
+                <td class="border px-4 py-2">AS197532</td>
+                <td class="border px-4 py-2">Permanent</td>
+              </tr>
+              <!-- More Rows Here in the Future -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Section: Places of Network Presence -->
+      <div class="my-8">
+        <h2 class="text-3xl font-bold">Places of Network Presence</h2>
+        <div class="mt-4">
+          <table class="table-auto w-full">
+            <thead>
+              <tr>
+                <th class="px-4 py-2">Hostname</th>
+                <th class="px-4 py-2">Routed Prefix</th>
+                <th class="px-4 py-2">Provider</th>
+                <th class="px-4 py-2">IXP Presence</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="border px-4 py-2">ams1.pop.selfhostable.net</td>
+                <td class="border px-4 py-2">2a05:dfc1:7200::/48</td>
+                <td class="border px-4 py-2">iFog</td>
+                <td class="border px-4 py-2">FogIXP</td>
+              </tr>
+              <!-- More Rows Here in the Future -->
+            </tbody>
+          </table>
+        </div>
       </div>
     </main>
+
+    <!-- Include the site footer -->
+    <Footer />
   </body>
 </html>

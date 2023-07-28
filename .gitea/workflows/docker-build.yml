@@ -1,0 +1,31 @@
+name: Docker Build
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    container:
+      image: catthehacker/ubuntu:act-latest
+    steps:
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      -
+        name: Login to Gitea Container Registry 
+        uses: docker/login-action@v2
+        with:
+          registry: git.selfhostable.net
+          username: ${{ secrets.CONTAINER_USERNAME }}
+          password: ${{ secrets.CONTAINER_TOKEN }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v4
+        with:
+          push: true
+          tags: git.selfhostable.net/stetsed/as-website:latest
+          cache-from: type=registry,ref=git.selfhostable.net/stetsed/as-website:cache
+          cache-to: type=registry,ref=git.selfhostable.net/stetsed/as-website:cache,mode=max

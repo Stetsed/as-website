@@ -18,7 +18,7 @@ So, you want to peer with AS-SELFHOSTABLE. We try to make this as simple as poss
 
 ## Contact
 
-For peering requests, please communicate the below details to our e-mail at <a href="text-blue-600" href="mailto:noc@selfhostable.net">noc@selfhostable.net</a>. You can find the IP's of our POP's on the IXP's on our routingDB profile (here)
+For peering requests, please communicate the below details to our e-mail at <a href="text-blue-600" href="mailto:peering@as.selfhostable.net">peering@as.selfhostable.net</a>. You can find the IP's of our POP's on the IXP's on our routingDB profile <a href="https://www.peeringdb.com/net/33728">here</a>.
 
 - ASN: (Your Registerd ASN)
 - IXP: (Internet Exchange your requesting to peer over)
