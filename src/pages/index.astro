@@ -1,50 +1,146 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main class="container mx-auto py-8">
+      <h1 class="text-4xl font-bold text-center mb-4">{SITE_TITLE}</h1>
+      <p class="text-center text-gray-600">{SITE_DESCRIPTION}</p>
+
+      <div class="my-8">
+        <h2 class="text-3xl font-bold">Information</h2>
+        <p class="mt-4">
+          Welcome to the AS-SET AS197532:AS-SELFHOSTABLE website. We are proud
+          to bring over 5 years of solid experience in sysadmin and selfhosting
+          and maintain a robust BGP infrastructure. We have a solid track record
+          of maintaing a high degree of uptime and reliability within our
+          network and our services.
+        </p>
+        <p class="mt-2">
+          For more details about our team, visit our <a
+            class="text-blue-600"
+            href="/about">About</a
+          > page.
+        </p>
+      </div>
+      <div class="my-8 bg-green-50 rounded p-8">
+        <h2 class="text-3xl font-bold">Consulting</h2>
+        <p class="mt-4 text-lg">
+          We offer consulting services with our extensive knowledge of system
+          and network administration, to inquire about these services please
+          contact us at <a
+            class="text-blue-600"
+            href="mailto:consulting@selfhostable.net"
+            >consulting@selfhostable.net</a
+          >
+        </p>
+      </div>
+      <div class="my-8 bg-red-50 rounded p-8">
+        <div class="grid grid-cols-2">
+          <div>
+            <h2 class="text-3xl font-bold">Peering Policy</h2>
+            <p class="mt-4 text-lg">
+              We are open to new peers to expand our Network, please check our
+              dedicated article on peering <a
+                class="text-blue-600"
+                href="/events/peering">here</a
+              >.
+            </p>
+          </div>
+          <img class="w-24 justify-self-end" src="/networking.png" />
+        </div>
+      </div>
+      <div class="my-8 bg-blue-50 rounded p-8">
+        <h2 class="text-3xl font-bold">Contact Us</h2>
+        <p class="mt-4 text-lg">
+          For contact relating to Abuse/Connectivety Issues/Other network
+          related issues please contact our NOC{" "}
+          <a class="text-blue-600" href="mailto:noc@selfhostable.net"
+            >noc@selfhostable.net</a
+          >.
+        </p>
+      </div>
+      <div class="my-8">
+        <h2 class="text-3xl font-bold">Current Held ASN's</h2>
+        <div class="mt-4">
+          <table class="table-auto w-full">
+            <thead>
+              <tr>
+                <th class="px-4 py-2">ASN</th>
+                <th class="px-4 py-2">Usage</th>
+                <tr> </tr>
+                <tbody>
+                  <tr>
+                    <td class="border px-4 py-2">AS197532</td>
+                    <td class="border px-4 py-2">Personal</td>
+                  </tr>
+                  <!-- More Rows Here in the Future -->
+                </tbody>
+              </tr>
+            </thead>
+          </table>
+
+          <div class="my-8">
+            <h2 class="text-3xl font-bold">Current Held Prefixes</h2>
+            <div class="mt-4">
+              <table class="table-auto w-full">
+                <thead>
+                  <tr>
+                    <th class="px-4 py-2">Prefix</th>
+                    <th class="px-4 py-2">Usage</th>
+                    <th class="px-4 py-2">Assigned ASN</th>
+                    <th class="px-4 py-2">Rented/Permanent/Owned</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border px-4 py-2">2a05:dfc1:7200::/40</td>
+                    <td class="border px-4 py-2">Active</td>
+                    <td class="border px-4 py-2">AS197532</td>
+                    <td class="border px-4 py-2">Permanent</td>
+                  </tr>
+                  <!-- More Rows Here in the Future -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="my-8">
+            <h2 class="text-3xl font-bold">Places of Network Presence</h2>
+            <div class="mt-4">
+              <table class="table-auto w-full">
+                <thead>
+                  <tr>
+                    <th class="px-4 py-2">Hostname</th>
+                    <th class="px-4 py-2">Routed Prefix</th>
+                    <th class="px-4 py-2">Provider</th>
+                    <th class="px-4 py-2">IXP Presence</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="border px-4 py-2">ams1.pop.selfhostable.net</td>
+                    <td class="border px-4 py-2">(Insert Later)</td>
+                    <td class="border px-4 py-2">iFog</td>
+                    <td class="border px-4 py-2">FogIXP</td>
+                  </tr>
+                  <!-- More Rows Here in the Future -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <Footer />
+      </div>
+    </main>
+  </body>
 </html>
