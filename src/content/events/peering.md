@@ -2,7 +2,7 @@
 title: 'Peering Information'
 description: 'Information about peering with us.'
 pubDate: 'Jul 28 23'
-heroImage: '/blog-placeholder-3.jpg'
+heroImage: '/peering.jpg'
 ---
 
 So, you want to peer with AS-SELFHOSTABLE. We try to make this as simple as possible to allow a larger network of directly connected nodes to coexist meaning there is less reliance on upstreams due to the direct connected nature. We do have some minor requirements to be able to peer with us, these aren't anything major but just to filter out trolls/people who are not serious or have malicious intent.
