@@ -5,7 +5,9 @@ pubDate: 'Jul 28 23'
 heroImage: '/peering.jpg'
 ---
 
-So, you want to peer with AS-SELFHOSTABLE. We try to make this as simple as possible to allow a larger network of directly connected nodes to coexist meaning there is less reliance on upstreams due to the direct connected nature. We do have some minor requirements to be able to peer with us, these aren't anything major but just to filter out trolls/people who are not serious or have malicious intent.
+Hey, happy you want to peer with us. We try to make this as simple as possible to allow a larger network of directly connected nodes to coexist meaning there is less reliance on upstreams due to the direct connected nature. We do have some minor requirements to be able to peer with us, these aren't anything major but just to filter out trolls/people who are not serious or have malicious intent.
+
+At this time we do not provide transit either and only offer peering of our own address space and your own space. We do not offer any form of paid peering either, as we feel that a peering relationship should be free and not paid for.
 
 ## Requirements
 
@@ -13,12 +15,12 @@ So, you want to peer with AS-SELFHOSTABLE. We try to make this as simple as poss
 - Have presence within an IXP we have presence at
 - Have up-to-date and accurate PeeringDB Profile
 - Pledge to not point any static/default-routes towards us.
-- Have IPv6 as we at this time do not handel IPv4
+- Have IPv6 as we at this time do not handle IPv4
 - Have functioning and active RPKI
 
 ## Contact
 
-For peering requests, please communicate the below details to our e-mail at <a href="text-blue-600" href="mailto:peering@as.selfhostable.net">peering@as.selfhostable.net</a>. You can find the IP's of our POP's on the IXP's on our routingDB profile <a href="https://www.peeringdb.com/net/33728">here</a>.
+For peering requests, please communicate the below details to our e-mail at <a href="text-blue-600" href="mailto:peering@as.selfhostable.net">peering@as.selfhostable.net</a>. You can find the IP's of our POP's on the IXP's on our PeeringDB profile <a href="https://www.peeringdb.com/net/33728">here</a>.
 
 - ASN: (Your Registerd ASN)
 - IXP: (Internet Exchange your requesting to peer over)
