@@ -1,7 +1,0 @@
-version: '3'
-services:
-  as-website:
-    image: git.selfhostable.net/stetsed/as-website:latest
-    restart: unless-stopped
-    ports:
-      - "4832:80"

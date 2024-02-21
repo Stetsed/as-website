@@ -1,180 +1,36 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <!-- Include the site header -->
-    <Header title={SITE_TITLE} />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS197532</title>
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+            margin: 10vh;
+        }
 
-    <!-- Main content container -->
-    <main class="container mx-auto py-8">
-      <h1 class="text-4xl font-bold text-center mb-4">{SITE_TITLE}</h1>
-      <p class="text-center text-gray-600">{SITE_DESCRIPTION}</p>
-
-      <!-- Section: Information -->
-      <div class="my-8">
-        <h2 class="text-3xl font-bold">Information</h2>
-        <p class="mt-4">
-          Welcome to AS-SET AS197532:AS-SELFHOSTABLE website. With over 5 years
-          of experience in system administration and self-hosting, we take pride
-          in maintaining a robust BGP infrastructure. Our network and services
-          have consistently demonstrated a high degree of uptime and
-          reliability.
-        </p>
-        <p class="mt-2">
-          For more details about our team, please visit our <a
-            class="text-blue-600"
-            href="/about">About</a
-          > page.
-        </p>
-      </div>
-
-      <!-- Section: Consulting -->
-      <div class="my-8 bg-green-50 rounded p-8">
-        <h2 class="text-3xl font-bold">Consulting</h2>
-        <p class="mt-4 text-lg">
-          We offer specialized consulting services leveraging our extensive
-          knowledge in system and network administration. To inquire about these
-          services, please contact us at <a
-            class="text-blue-600"
-            href="mailto:consulting@as.selfhostable.net"
-            >consulting@as.selfhostable.net</a
-          >.
-        </p>
-      </div>
-
-      <!-- Section: Peering Policy -->
-      <div class="my-8 bg-red-50 rounded p-8">
-        <div class="grid grid-cols-2">
-          <div>
-            <h2 class="text-3xl font-bold">Peering Policy</h2>
-            <p class="mt-4 text-lg">
-              We welcome new peers to expand our Network. For more information,
-              please refer to our dedicated article on peering <a
-                class="text-blue-600"
-                href="/events/peering">here</a
-              >.
-            </p>
-          </div>
-          <img
-            class="w-24 justify-self-end"
-            src="/networking.png"
-            alt="Networking"
-          />
-        </div>
-      </div>
-
-      <!-- Section: Contact Us -->
-      <div class="my-8 bg-blue-50 rounded p-8">
-        <h2 class="text-3xl font-bold">Contact Us</h2>
-        <p class="mt-4 text-lg">
-          For any concerns regarding Abuse, Connectivity Issues, or other
-          network-related matters, please reach out to our Network Operations
-          Center (NOC) at <a
-            class="text-blue-600"
-            href="mailto:noc@as.selfhostable.net">noc@as.selfhostable.net</a
-          >.
-        </p>
-      </div>
-
-      <!-- Section: Current Held ASN's -->
-      <div class="my-8">
-        <h2 class="text-3xl font-bold">Current Held ASN's</h2>
-        <div class="mt-4">
-          <table class="table-auto w-full">
-            <thead>
-              <tr>
-                <th class="px-4 py-2">ASN</th>
-                <th class="px-4 py-2">Usage</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="border px-4 py-2">AS197532</td>
-                <td class="border px-4 py-2">Personal</td>
-              </tr>
-              <!-- More Rows Here in the Future -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Section: Current Held Prefixes -->
-      <div class="my-8">
-        <h2 class="text-3xl font-bold">Current Held Prefixes</h2>
-        <div class="mt-4">
-          <table class="table-auto w-full">
-            <thead>
-              <tr>
-                <th class="px-4 py-2">Prefix</th>
-                <th class="px-4 py-2">Usage</th>
-                <th class="px-4 py-2">Assigned ASN</th>
-                <th class="px-4 py-2">Rented/Permanent/Owned</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="border px-4 py-2">2a05:dfc1:7200::/40</td>
-                <td class="border px-4 py-2">Active</td>
-                <td class="border px-4 py-2">AS197532</td>
-                <td class="border px-4 py-2">Permanent</td>
-              </tr>
-              <!-- More Rows Here in the Future -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Section: Places of Network Presence -->
-      <div class="my-8">
-        <h2 class="text-3xl font-bold">Places of Network Presence</h2>
-        <div class="mt-4">
-          <table class="table-auto w-full">
-            <thead>
-              <tr>
-                <th class="px-4 py-2">Hostname</th>
-                <th class="px-4 py-2">Routed Prefix</th>
-                <th class="px-4 py-2">Provider</th>
-                <th class="px-4 py-2">IXP Presence</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="border px-4 py-2">ams1.pop.selfhostable.net</td>
-                <td class="border px-4 py-2">2a05:dfc1:7200::/48</td>
-                <td class="border px-4 py-2"
-                  ><a class="text-blue-600" href="https://ifog.ch">iFog</a></td
-                >
-                <td class="border px-4 py-2">FogIXP</td>
-              </tr>
-              <tr>
-                <td class="border px-4 py-2">rij1.pop.selfhostable.net</td>
-                <td class="border px-4 py-2">2a05:dfc1:7201::/48</td>
-                <td class="border px-4 py-2">Homelab</td>
-                <td class="border px-4 py-2">N/A</td>
-              </tr>
-              <tr>
-                <td class="border px-4 py-2">ott1.pop.selfhostable.net</td>
-                <td class="border px-4 py-2">2a05:dfc1:72a0::/44</td>
-                <td class="border px-4 py-2">Accuris Technologies</td>
-                <td class="border px-4 py-2">AccurIX</td>
-                <!-- More Rows Here in the Future -->
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Include the site footer -->
-      <Footer />
-    </main>
-  </body>
+        * {
+            text-align: center;
+        }
+        p {
+            word-wrap: break-word;
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <h1>AS197532</h1>
+    <p>AS197532 is a small network operated by Quinn Hooft, it is a personal/educational network and is used to learn about BGP and networking and to provide services to friends and family, and to promote the use of IPv6 inside of the Internet to improve adoption.</p>
+    <h2>Contact</h2>
+    <p>For any queries, please contact <a href="mailto:noc@as.selfhostable.net">noc@as.selfhostable.net</a>, incase you wish to peer you can contact <a href="mailto:peering@as.selfhostable.net">peering@as.selfhostable.net</a>, we maintain an open peering policy unless there is suspicion of abuse or malicious intent.</p>
+    <h2>Information</h2>
+    <p>You can find a geofeed for AS197532 <a href="https://selfhostable.net/geofeed.csv">here</a>, as of time of writing we are present on FogIXP and AccurIX for peering, we do not peer over tunnels, for more maintained info check <a href="https://www.peeringdb.com/net/33728">PeeringDB</a> and <a href="https://bgp.tools/as/197532">bgp.tools</a> for a source of truth surrounding our network.</p>
+</body>
 </html>
+
